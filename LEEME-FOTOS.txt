@@ -1,0 +1,74 @@
+CÓMO AÑADIR LAS FOTOS A LA WEB
+================================
+
+Mete cada imagen en esta carpeta "img" con el NOMBRE EXACTO indicado
+abajo (mayúsculas/minúsculas y guiones tal cual). En cuanto el archivo
+tenga ese nombre, la foto aparece sola en la web, sin tocar código.
+Formato recomendado: .jpg
+
+INICIO (index.html) — carrusel del hero
+------------------------------------------
+- hero-1.jpg, hero-2.jpg, hero-3.jpg   → las 3 fotos que rotan en la portada (anchas, 1600x700 aprox.)
+
+INICIO — bloque "Comprometidos con cada fase de tu proyecto"
+------------------------------------------------------------
+- comprometidos.jpg   → foto de obra (se muestra en blanco y negro automáticamente)
+
+INICIO / PROYECTOS REALIZADOS — galería
+------------------------------------------
+- proyecto-01.jpg  → centro infantil
+- proyecto-02.jpg  → reforma de baño
+- proyecto-03.jpg  → rampa accesible de madera
+- proyecto-04.jpg  → fachada de vivienda
+- proyecto-05.jpg  → reforma interior de vivienda
+- proyecto-06.jpg  → obra en fase de estructura
+- proyecto-07.jpg  → impermeabilización de cubierta
+- proyecto-08.jpg  → rehabilitación de cubierta / vivienda
+- proyecto-09.jpg  → rehabilitación de cubierta / nave
+- proyecto-10.jpg  → rehabilitación de ermita con andamios (solo en Proyectos realizados)
+- proyecto-11.jpg  → refuerzo estructural con andamios (solo en Proyectos realizados)
+
+INICIO — fondo de la sección "Nuestros clientes satisfechos"
+------------------------------------------------------------
+- testimonios-fondo.jpg   → foto de fondo (siluetas de obra), se ve oscurecida
+
+FOOTER — logos de financiación (todas las páginas)
+------------------------------------------------------
+- logo-ue.png     → logotipo oficial "Financiado por la Unión Europea – NextGenerationEU"
+- logo-prtr.png   → logotipo oficial "Plan de Recuperación, Transformación y Resiliencia"
+  (Estos son logotipos institucionales oficiales: mejor descargarlos de la fuente
+  oficial del Gobierno/UE en vez de recrearlos, para que sean exactos.)
+
+ÁREA DE CONSTRUCCIÓN (area-de-construccion.html)
+------------------------------------------------------------
+- construccion-portada.jpg
+- construccion-viviendas.jpg
+- construccion-edificios.jpg
+- construccion-solados.jpg
+- construccion-jardineria.jpg
+
+ÁREA DE REFORMAS (area-de-reformas.html)
+------------------------------------------------------------
+- reformas-portada.jpg
+- reformas-vivienda.jpg
+- reformas-oficinas.jpg
+- reformas-locales.jpg
+- reformas-bano.jpg
+- reformas-cocina.jpg
+- reformas-comunidades.jpg
+- reformas-patios.jpg
+- reformas-cubiertas.jpg
+- reformas-impermeabilizacion.jpg
+
+ÁREA DE REHABILITACIÓN (area-de-rehabilitacion.html)
+------------------------------------------------------------
+- rehabilitacion-portada.jpg
+- rehabilitacion-fachadas.jpg
+- rehabilitacion-impermeabilizacion.jpg
+- rehabilitacion-edificios.jpg
+- rehabilitacion-ahorro.jpg
+
+Mientras no añadas una foto, en ese hueco se ve un recuadro gris con
+el nombre del archivo que falta — así siempre sabéis qué queda por poner.
+
+El logotipo de Olivilla Tres ya está puesto (logo.png), no hace falta tocarlo.
