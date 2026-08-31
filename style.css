@@ -791,3 +791,69 @@ img.ph{
   .area-services-grid{ grid-template-columns:1fr; }
   .area-hero-photo{ height:420px; }
 }
+/* =========================================================
+   Página Sobre Nosotros — franja intro bajo el hero de foto
+   ========================================================= */
+.intro-band{ background:var(--indigo); padding:3.2em 0; }
+.intro-band p{
+  max-width:900px; margin:0 auto; text-align:center;
+  color:rgba(255,255,255,.92); font-size:1.05rem; line-height:1.7;
+}
+.intro-band strong{ color:var(--white); }
+
+/* =========================================================
+   Nuestra historia — texto + foto (fondo claro)
+   ========================================================= */
+.historia-section{ padding:100px 0; }
+.historia-grid{ display:grid; grid-template-columns:1fr 1fr; gap:4em; align-items:center; }
+.historia-copy h2{ color:var(--magenta); font-size:clamp(1.6rem,2.8vw,2rem); text-transform:uppercase; }
+.historia-copy p{ margin-top:1.3em; color:var(--ink); font-size:1rem; line-height:1.75; }
+.historia-copy p + p{ margin-top:1.6em; }
+.historia-figure{ aspect-ratio:4/3.4; border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); }
+
+/* =========================================================
+   Nuestro equipo — intro centrada (fondo claro)
+   ========================================================= */
+.equipo-intro{ background:var(--paper-2); padding:90px 0 0; text-align:center; }
+.equipo-intro h2{ color:var(--magenta); font-size:clamp(1.5rem,2.6vw,1.9rem); text-transform:uppercase; }
+.equipo-intro p{ margin-top:1.2em; max-width:760px; margin-left:auto; margin-right:auto; color:var(--ink-70); font-size:1rem; }
+
+/* =========================================================
+   Nuestro método de trabajo — línea de tiempo
+   ========================================================= */
+.metodo-section{ background:var(--paper-2); padding:70px 0 110px; }
+.metodo-section h2{
+  text-align:center; color:var(--indigo);
+  font-size:clamp(1.8rem,3.4vw,2.4rem); text-transform:none;
+}
+.metodo-timeline{ position:relative; max-width:900px; margin:3.4em auto 0; padding-left:76px; }
+.metodo-timeline::before{
+  content:""; position:absolute; left:25px; top:26px; bottom:26px; width:2px; background:var(--line);
+}
+.metodo-step{ position:relative; margin-bottom:1.8em; }
+.metodo-step:last-child{ margin-bottom:0; }
+.metodo-icon{
+  position:absolute; left:-76px; top:0;
+  width:52px; height:52px; border-radius:50%;
+  background:var(--indigo);
+  display:flex; align-items:center; justify-content:center;
+  z-index:2;
+}
+.metodo-icon svg{ width:22px; height:22px; stroke:var(--white); fill:none; stroke-width:1.6; }
+.metodo-card{
+  background:var(--white); border-radius:var(--radius);
+  box-shadow:0 14px 34px -20px rgba(34,31,53,.22);
+  padding:1.8em 2.2em;
+}
+.metodo-card h3{ color:var(--magenta); font-size:1.2rem; text-transform:none; }
+.metodo-card p{ margin-top:.6em; color:var(--ink-70); font-size:.95rem; }
+
+@media (max-width: 980px){
+  .historia-grid{ grid-template-columns:1fr; }
+  .historia-figure{ order:-1; }
+}
+@media (max-width: 640px){
+  .metodo-timeline{ padding-left:62px; }
+  .metodo-icon{ left:-62px; width:44px; height:44px; }
+  .metodo-icon svg{ width:18px; height:18px; }
+}
