@@ -857,3 +857,39 @@ img.ph{
   .metodo-icon{ left:-62px; width:44px; height:44px; }
   .metodo-icon svg{ width:18px; height:18px; }
 }
+
+/* =========================================================
+   Contacto — franja índigo con 3 columnas de información
+   ========================================================= */
+.contact-info-band{ background:var(--indigo); color:var(--white); padding:4.4em 0; }
+.contact-info-band .container{ display:grid; grid-template-columns:repeat(3,1fr); gap:2.6em; text-align:center; }
+.contact-info-band .accent-bar{ width:60px; height:4px; background:var(--magenta); margin:0 auto 1.3em; border-radius:2px; display:block; }
+.contact-info-band h3{ color:var(--white); font-size:1.35rem; text-transform:none; }
+.contact-info-band p{ margin-top:.5em; color:rgba(255,255,255,.85); font-size:.95rem; }
+.contact-info-band a.val{ color:var(--white); }
+.contact-info-band strong.info-title{ display:block; margin-top:1em; font-weight:700; color:var(--white); }
+.contact-info-band p:first-of-type strong.info-title{ margin-top:0; }
+
+/* =========================================================
+   Contacto — sección de formulario (a ancho completo, sobre índigo)
+   ========================================================= */
+.contact-form-section{ background:var(--indigo); padding:4.4em 0 5em; }
+.form-grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:1.6em 2em; }
+.form-grid-2 .field-full{ grid-column:1 / -1; }
+.privacy-check{ display:flex; align-items:flex-start; gap:.8em; margin-top:1.8em; }
+.privacy-check input{ margin-top:.35em; width:16px; height:16px; flex:none; accent-color:var(--magenta); }
+.privacy-check label{ font-size:.85rem; color:rgba(255,255,255,.85); line-height:1.5; }
+.privacy-check strong{ color:var(--white); }
+.contact-form-section .btn{ margin-top:2em; }
+
+/* =========================================================
+   Mapa a pantalla completa
+   ========================================================= */
+.map-full{ height:440px; }
+.map-full iframe{ width:100%; height:100%; border:0; }
+
+@media (max-width: 980px){
+  .contact-info-band .container{ grid-template-columns:1fr; gap:2.4em; }
+  .form-grid-2{ grid-template-columns:1fr; }
+  .map-full{ height:320px; }
+}

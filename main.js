@@ -40,20 +40,57 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 4500);
   }
 
-  // Formulario de contacto: envío simulado (no hay backend en esta recreación)
+  // Formulario de contacto: Envió REAL a Web3Forms mediante AJAX
   var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
+      e.preventDefault(); // Evita la recarga de página convencional
+
       var btn = form.querySelector('button[type="submit"]');
       var original = btn.textContent;
-      btn.textContent = 'Mensaje enviado ✓';
+      
+      // Estado visual de carga
+      btn.textContent = 'Enviando...';
       btn.disabled = true;
-      setTimeout(function () {
-        btn.textContent = original;
-        btn.disabled = false;
-        form.reset();
-      }, 3000);
+
+      // Recopilar los datos del HTML de manera dinámica
+      var formData = new FormData(form);
+      var object = Object.fromEntries(formData);
+      var json = JSON.stringify(object);
+
+      // Petición a la API de Web3Forms
+      fetch('https://web3forms.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+      .then(async function(response) {
+        var jsonRes = await response.json();
+        if (response.status === 200) {
+          // Éxito: El correo se ha procesado correctamente
+          btn.textContent = 'Mensaje enviado ✓';
+          form.reset();
+        } else {
+          // Error controlado por la API (ej. clave incorrecta)
+          btn.textContent = 'Error al enviar ✕';
+          console.error('Error Web3Forms:', jsonRes.message);
+        }
+      })
+      .catch(function(error) {
+        // Error de red (sin conexión a internet, caída de servidor, etc.)
+        btn.textContent = 'Error de conexión ✕';
+        console.error('Error de red:', error);
+      })
+      .then(function() {
+        // Devolver el botón a su estado original pasados 4 segundos
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.disabled = false;
+        }, 4000);
+      });
     });
   }
 });
