@@ -5,7 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
   if (toggle && nav) {
     toggle.addEventListener('click', function () {
       var open = nav.classList.toggle('nav-open');
+      toggle.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('nav-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
     });
   }
 
@@ -40,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 4500);
   }
 
-  // Formulario de contacto: Envió REAL a Web3Forms mediante AJAX
+  // Formulario de contacto/presupuesto: envío real a Web3Forms mediante AJAX
   var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -48,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var btn = form.querySelector('button[type="submit"]');
       var original = btn.textContent;
-      
+
       // Estado visual de carga
       btn.textContent = 'Enviando...';
       btn.disabled = true;
@@ -59,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var json = JSON.stringify(object);
 
       // Petición a la API de Web3Forms
-      fetch('https://web3forms.com', {
+      fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -67,10 +77,10 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         body: json
       })
-      .then(async function(response) {
+      .then(async function (response) {
         var jsonRes = await response.json();
         if (response.status === 200) {
-          // Éxito: El correo se ha procesado correctamente
+          // Éxito: el correo se ha procesado correctamente
           btn.textContent = 'Mensaje enviado ✓';
           form.reset();
         } else {
@@ -79,12 +89,12 @@ document.addEventListener('DOMContentLoaded', function () {
           console.error('Error Web3Forms:', jsonRes.message);
         }
       })
-      .catch(function(error) {
+      .catch(function (error) {
         // Error de red (sin conexión a internet, caída de servidor, etc.)
         btn.textContent = 'Error de conexión ✕';
         console.error('Error de red:', error);
       })
-      .then(function() {
+      .then(function () {
         // Devolver el botón a su estado original pasados 4 segundos
         setTimeout(function () {
           btn.textContent = original;

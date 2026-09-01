@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitar Presupuesto — Olivilla Tres</title>
+<meta name="description" content="Solicita tu presupuesto de construcción, reforma o rehabilitación con Olivilla Tres en Toledo. Sin compromiso.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="logo.png" alt="Olivilla Tres — Soluciones Constructivas"></a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+        <li><a href="area-de-construccion.html">Área de construcción</a></li>
+        <li><a href="area-de-reformas.html">Área de reformas</a></li>
+        <li><a href="proyectos-realizados.html">Proyectos realizados</a></li>
+      </ul>
+      <div class="nav-actions-mobile">
+        <a href="solicitar-presupuesto.html" class="nav-btn-outline" aria-current="page">Solicitar presupuesto</a>
+        <a href="contacto.html" class="nav-cta">Contacto</a>
+      </div>
+    </nav>
+    <div class="nav-actions">
+      <a href="solicitar-presupuesto.html" class="nav-btn-outline" aria-current="page">Solicitar presupuesto</a>
+      <a href="contacto.html" class="nav-cta">Contacto</a>
+    </div>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO: foto a pantalla completa con texto superpuesto -->
+  <section class="area-hero-photo">
+    <img class="ph" src="img/presupuesto-portada.jpg" alt="Foto de una cubierta de teja — Olivilla Tres">
+    <div class="area-hero-photo-overlay">
+      <div class="container">
+        <span class="eyebrow" style="justify-content:center; margin-bottom:.8em;">Solicitar presupuesto</span>
+        <h1>Solicita tu presupuesto con nosotros</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRO MÉTODO DE TRABAJO -->
+  <section class="metodo-section">
+    <div class="container">
+      <h2>Nuestro Método de Trabajo</h2>
+      <div class="metodo-timeline">
+        <div class="metodo-step reveal">
+          <div class="metodo-icon"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v10h14V10" stroke-linecap="round" stroke-linejoin="round"/><rect x="10.5" y="14" width="3" height="3"/></svg></div>
+          <div class="metodo-card">
+            <h3>Visita</h3>
+            <p>Evaluamos, medimos, oímos tu idea y aconsejamos.</p>
+          </div>
+        </div>
+        <div class="metodo-step reveal">
+          <div class="metodo-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M7 13.5C4.5 14 3 15.3 3 17c0 2.2 4 4 9 4s9-1.8 9-4c0-1.7-1.5-3-4-3.5" stroke-linecap="round"/></svg></div>
+          <div class="metodo-card">
+            <h3>Presupuesto</h3>
+            <p>Realizamos el presupuesto en base a lo hablado con el cliente sobre sus necesidades. Detallando todos los puntos requeridos.</p>
+          </div>
+        </div>
+        <div class="metodo-step reveal">
+          <div class="metodo-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.1-3.1a5 5 0 01-6.4 6.4L5 22l-3-3 9.6-9.6a5 5 0 016.4-6.4z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="metodo-card">
+            <h3>Planificación de Obra</h3>
+            <p>Una vez aceptado el presupuesto se solicitan los permisos necesarios y se realiza un planning de la obra dando una estimada duración.</p>
+          </div>
+        </div>
+        <div class="metodo-step reveal">
+          <div class="metodo-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8l6 4-6 4V8z" fill="var(--white)" stroke="none"/></svg></div>
+          <div class="metodo-card">
+            <h3>Ejecución</h3>
+            <p>Comenzamos el proyecto, cumpliendo con el planning planeado. El cliente siempre puede estar en contacto con la empresa para dudas o para temas de elección de materiales finales.</p>
+          </div>
+        </div>
+        <div class="metodo-step reveal">
+          <div class="metodo-icon"><svg viewBox="0 0 24 24"><path d="M5 21V4m0 0h13l-2.5 3.5L18 11H5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="metodo-card">
+            <h3>Fin de Obra</h3>
+            <p>Entrega de la obra, con sus certificados, documentaciones y garantía.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUÉNTANOS TU IDEA -->
+  <section class="contact-form-section">
+    <div class="container">
+      <h2>¡Cuéntanos tu idea!</h2>
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="f10ae421-5743-409b-9a35-0ad234784c31">
+        <input type="hidden" name="subject" value="Nueva solicitud de presupuesto - Olivilla Tres">
+        <input type="hidden" name="from_name" value="Web Olivilla Tres">
+
+        <div class="form-grid-2">
+          <div class="field">
+            <label for="nombre">Nombre <span style="color:var(--magenta)">*</span></label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono <span style="color:var(--magenta)">*</span></label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+          <div class="field field-full">
+            <label for="email">Email <span style="color:var(--magenta)">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field field-full">
+            <label for="mensaje">Cuéntanos tu idea</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+          </div>
+        </div>
+        <div class="privacy-check">
+          <input type="checkbox" id="privacidad" name="privacidad" required>
+          <label for="privacidad">He leído y acepto la <a href="aviso-legal.html"><strong>Política de Privacidad</strong></a> y los <a href="aviso-legal.html"><strong>Avisos Legales</strong></a>. Autorizo el uso de mis datos para la gestión de mi solicitud.</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Solicita tu Presupuesto</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACTO + MAPA -->
+  <section class="contact-real">
+    <div class="container">
+      <h2 class="reveal">Contacto</h2>
+      <div class="contact-real-grid">
+        <div class="contact-real-info reveal">
+          <p><strong>Dirección</strong>Olivilla Tres, C. Río Valdecelada 7, Polígono Industrial, Toledo.</p>
+          <p><strong>Email</strong><a href="mailto:almacen@olivillatres.com">almacen@olivillatres.com</a></p>
+          <p><strong>Teléfono</strong><a href="tel:925233454">925 23 34 54</a></p>
+          <p><strong>Horarios</strong>De Lunes a Viernes: 8:00–14:00 · 16:00–19:00<br>Verano: 7:00–15:00</p>
+        </div>
+        <div class="contact-real-map reveal">
+          <iframe title="Mapa de ubicación de Olivilla Tres en Toledo" loading="lazy" src="https://www.google.com/maps?q=C.+Rio+Valdecelada+7,+Poligono+Industrial,+Toledo&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="logo.png" alt="Olivilla Tres"></a>
+    <div class="footer-funding">
+      <img class="ph" src="es_financiado_por_la_union_europea_pos.png" alt="Financiado por la Unión Europea — NextGenerationEU" style="height:34px;">
+      <img class="ph" src="Logotipo_del_Plan_de_Recuperacion_Transformacion_y_Resiliencia.svg-2048x670.png" alt="Plan de Recuperación, Transformación y Resiliencia" style="height:34px;">
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Facebook de Olivilla Tres"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3a3 3 0 00-3 3v2H8v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
+    </div>
+    <div class="footer-bottom">
+      <span>2026 Olivilla Tres — Todos los derechos reservados.</span>
+      <span style="display:flex; gap:1.6em;">
+        <a href="aviso-legal.html">Política de privacidad</a>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="aviso-legal.html">Política de cookies</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="https://TU-APP.onrender.com/widget.js"></script>
+</body>
+</html>
