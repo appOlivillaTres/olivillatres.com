@@ -50,6 +50,187 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 4500);
   }
 
+  // Carrusel de "Nuestras áreas" — con autoplay y flechas manuales
+// Carrusel de "Nuestras áreas"
+var areasViewport = document.querySelector('.areas-grid');
+var areasPrev = document.querySelector('.areas-nav button[aria-label="Anterior"]');
+var areasNext = document.querySelector('.areas-nav button[aria-label="Siguiente"]');
+
+if (areasViewport && areasPrev && areasNext) {
+
+  var track = document.createElement('div');
+  track.className = 'areas-track';
+
+  // Guardamos las tarjetas originales
+  var items = Array.from(areasViewport.children);
+
+  // Metemos las tarjetas dentro del track
+  items.forEach(function (item) {
+    track.appendChild(item);
+  });
+
+  areasViewport.appendChild(track);
+
+  var animating = false;
+
+  // Mover una tarjeta hacia delante
+  var goNext = function () {
+
+    if (animating) return;
+    animating = true;
+
+    var first = track.firstElementChild;
+
+    // Calculamos cuánto mide una tarjeta + el espacio entre ellas
+    var style = getComputedStyle(track);
+    var gap = parseFloat(style.gap) || 0;
+    var width = first.getBoundingClientRect().width + gap;
+
+    // Desplazamos el track
+    track.style.transition = 'transform .5s ease';
+    track.style.transform = 'translateX(-' + width + 'px)';
+
+    // Cuando termina la animación:
+    track.addEventListener('transitionend', function handler() {
+
+      track.removeEventListener('transitionend', handler);
+
+      // Quitamos la primera
+      track.removeChild(first);
+
+      // Y la ponemos al final
+      track.appendChild(first);
+
+      // Volvemos a la posición inicial sin animación
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(0)';
+
+      animating = false;
+    });
+  };
+
+
+  // Mover una tarjeta hacia atrás
+  var goPrev = function () {
+
+    if (animating) return;
+    animating = true;
+
+    var last = track.lastElementChild;
+
+    var style = getComputedStyle(track);
+    var gap = parseFloat(style.gap) || 0;
+    var width = last.getBoundingClientRect().width + gap;
+
+    // Ponemos la última tarjeta delante
+    track.insertBefore(last, track.firstElementChild);
+
+    // La colocamos desplazada hacia la izquierda
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(-' + width + 'px)';
+
+    // Forzamos al navegador a aplicar esa posición
+    track.offsetHeight;
+
+    // Animamos hasta 0
+    track.style.transition = 'transform .5s ease';
+    track.style.transform = 'translateX(0)';
+
+    track.addEventListener('transitionend', function handler() {
+
+      track.removeEventListener('transitionend', handler);
+
+      animating = false;
+    });
+  };
+
+
+  // Flechas
+  areasNext.addEventListener('click', function () {
+    stopAreasAutoplay();
+    goNext();
+    startAreasAutoplay();
+  });
+
+  areasPrev.addEventListener('click', function () {
+    stopAreasAutoplay();
+    goPrev();
+    startAreasAutoplay();
+  });
+
+
+  // Autoplay
+  var areasTimer;
+
+  var startAreasAutoplay = function () {
+    clearInterval(areasTimer);
+    areasTimer = setInterval(goNext, 4000);
+  };
+
+  var stopAreasAutoplay = function () {
+    clearInterval(areasTimer);
+  };
+
+
+  // Pausar al pasar el ratón
+  areasViewport.addEventListener('mouseenter', stopAreasAutoplay);
+  areasViewport.addEventListener('mouseleave', startAreasAutoplay);
+
+  // Touch
+  areasViewport.addEventListener('touchstart', stopAreasAutoplay, {
+    passive: true
+  });
+
+  areasViewport.addEventListener('touchend', startAreasAutoplay, {
+    passive: true
+  });
+
+
+  // Iniciar
+  startAreasAutoplay();
+}
+
+  // Carrusel de reseñas (rellena este array con más reseñas reales de Google)
+  var reviews = [
+    {
+      initial: 'J',
+      name: 'Juan Manzano',
+      time: 'hace 4 años',
+      stars: 5,
+      text: 'Aislamientos, rejillas, pladur, etc. Lo que necesites. Son unos máquinas.'
+    }
+    // { initial:'M', name:'María ...', time:'hace 1 año', stars:5, text:'...' },
+  ];
+  var reviewIndex = 0;
+  var reviewCard = document.querySelector('.review-card');
+  if (reviewCard && reviews.length > 1) {
+    var avatarEl = reviewCard.querySelector('.review-avatar');
+    var nameEl = reviewCard.querySelector('.review-who strong');
+    var timeEl = reviewCard.querySelector('.review-who span');
+    var starsEl = reviewCard.querySelector('.stars');
+    var textEl = reviewCard.querySelector('.review-box p');
+
+    var renderReview = function () {
+      var r = reviews[reviewIndex];
+      avatarEl.textContent = r.initial;
+      nameEl.textContent = r.name;
+      timeEl.textContent = r.time;
+      starsEl.textContent = '★★★★★'.slice(0, r.stars);
+      textEl.textContent = r.text;
+    };
+
+    var reviewsPrev = document.querySelector('.reviews-nav button[aria-label="Reseña anterior"]');
+    var reviewsNext = document.querySelector('.reviews-nav button[aria-label="Reseña siguiente"]');
+    reviewsPrev.addEventListener('click', function () {
+      reviewIndex = (reviewIndex - 1 + reviews.length) % reviews.length;
+      renderReview();
+    });
+    reviewsNext.addEventListener('click', function () {
+      reviewIndex = (reviewIndex + 1) % reviews.length;
+      renderReview();
+    });
+  }
+
   // Formulario de contacto/presupuesto: envío real a Web3Forms mediante AJAX
   var form = document.getElementById('contact-form');
   if (form) {
