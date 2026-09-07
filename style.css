@@ -113,7 +113,7 @@ img.ph{
 .btn-primary{ background:var(--magenta); color:var(--white); }
 .btn-primary:hover{ background:var(--magenta-dark); transform:translateY(-2px); }
 .btn-ghost{ border-color:currentColor; color:var(--ink); }
-.btn-ghost:hover{ background:var(--ink); color:var(--white); border-color:var(--ink); transform:translateY(-2px); }
+.btn-ghost:hover{ background:#932C6E; color:#403E72; border-color:var(--ink); transform:translateY(-2px); }
 .hero-actions{ display:flex; gap:1em; flex-wrap:wrap; }
 
 /* =========================================================
@@ -336,7 +336,7 @@ img.ph{
 .cta-band p{ margin-top:1em; color:rgba(255,255,255,.85); max-width:520px; margin-left:auto; margin-right:auto; }
 .cta-band .hero-actions{ justify-content:center; margin-top:2.2em; }
 .cta-band .btn-ghost{ color:var(--white); }
-.cta-band .btn-ghost:hover{ background:var(--white); color:var(--magenta); }
+.cta-band .btn-ghost:hover{ background:#403E72; color:#BE3A8E !important; }
 .cta-band .btn-primary{ background:var(--ink); }
 .cta-band .btn-primary:hover{ background:var(--white); color:var(--magenta); }
 
