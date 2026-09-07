@@ -531,7 +531,7 @@ img.ph{
 .areas-real .section-head-row{
   display:flex; justify-content:space-between; align-items:flex-end; gap:2em; flex-wrap:wrap;
 }
-.areas-real h2{ font-size:clamp(1.8rem,3.4vw,2.4rem); }
+.areas-real h2{ font-size:clamp(1.8rem,3.4vw,3.4rem); color: #565495;}
 .areas-nav{ display:flex; gap:.7em; }
 .areas-nav button{
   width:42px; height:42px; border-radius:50%; border:1.5px solid var(--indigo);
@@ -544,8 +544,8 @@ img.ph{
 .areas-grid{ margin-top:3em; display:grid; grid-template-columns:repeat(3,1fr); gap:2.4em; }
 .area-item .ico{ width:44px; height:44px; }
 .area-item .ico svg{ width:100%; height:100%; stroke:var(--ink); fill:none; stroke-width:1.5; }
-.area-item h3{ font-size:1.3rem; margin-top:1em; }
-.area-item p{ margin-top:.7em; color:var(--ink-70); font-size:.95rem; max-width:340px; }
+.area-item h3{ font-size:2.3rem; margin-top:1em;color: #565495; }
+.area-item p{ margin-top:.7em; color:black; font-size:.95rem; max-width:340px; }
 .area-item .more{
   margin-top:1.1em; display:inline-block;
   font-family:var(--font-mono); font-size:.75rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase;
@@ -582,8 +582,8 @@ img.ph{
 .gama-item.is-highlight{ border-left:2px solid var(--magenta); border-right:2px solid var(--magenta); }
 .gama-item .ico{ width:40px; height:40px; margin:0 auto; }
 .gama-item .ico svg{ width:100%; height:100%; stroke:var(--ink); fill:none; stroke-width:1.5; }
-.gama-item h3{ font-size:1.15rem; margin-top:1em; }
-.gama-item p{ margin-top:.7em; color:var(--ink-70); font-size:.92rem; }
+.gama-item h3{ font-size:1.15rem; margin-top:1em; color:#565495; }
+.gama-item p{ margin-top:.7em; color:black; font-size:.92rem; }
 
 /* =========================================================
    Proyectos realizados (galería tipo mosaico)
