@@ -2238,7 +2238,7 @@ img.ph {
    Página de área — cuadrícula de servicios sobre índigo
    ========================================================= */
 .area-services {
-  background: var(--indigo);
+  background: #4a3b68;
   padding: 70px 0 90px;
   color: var(--white);
 }
@@ -2593,7 +2593,7 @@ img.ph {
    Contacto — franja índigo con 3 columnas de información
    ========================================================= */
 .contact-info-band {
-  background: var(--indigo);
+  background: #35284f;
   color: var(--white);
   padding: 4.4em 0;
 }
@@ -2645,7 +2645,7 @@ img.ph {
    Contacto — sección de formulario (a ancho completo, sobre índigo)
    ========================================================= */
 .contact-form-section {
-  background: var(--indigo);
+  background: #4a3b68;
   padding: 4.4em 0 5em;
 }
 
