@@ -2164,7 +2164,7 @@ img.ph {
    ========================================================= */
 .area-hero-photo {
   position: relative;
-  height: 560px;
+  height: 600px;
   overflow: hidden;
   color: var(--white);
 }
@@ -2417,7 +2417,7 @@ img.ph {
    Nuestra historia — texto + foto (fondo claro)
    ========================================================= */
 .historia-section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .historia-grid {
