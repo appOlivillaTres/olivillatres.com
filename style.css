@@ -1091,7 +1091,7 @@ img.ph {
 }
 
 .field {
-  margin-top: 1.6em;
+  margin-top: 0.6em;
 }
 
 .field label {
@@ -2205,11 +2205,139 @@ img.ph {
   padding: 0 24px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+.area-hero-photo2 {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  color: var(--white);
+}
+
+
+.area-hero-photo2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.area-hero-photo2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 18, 32, .32), rgba(20, 18, 32, .58));
+}
+
+.area-hero-photo2-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.area-hero-photo2-overlay h1 {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: clamp(1.7rem, 4.2vw, 3rem);
+  max-width: 900px;
+  padding: 0 24px;
+}
+
+.area-hero-photo3 {
+  position: relative;
+  height: 640px;
+  overflow: hidden;
+  color: var(--white);
+}
+
+.area-hero-photo3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.area-hero-photo3::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 18, 32, .32), rgba(20, 18, 32, .58));
+}
+
+.area-hero-photo3-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.area-hero-photo3-overlay h1 {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: clamp(1.7rem, 4.2vw, 3rem);
+  max-width: 900px;
+  padding: 0 24px;
+}
+
+
+.area-hero-photo4 {
+  position: relative;
+  height: 545px;
+  overflow: hidden;
+  color: var(--white);
+}
+
+.area-hero-photo4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.area-hero-photo4::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 18, 32, .32), rgba(20, 18, 32, .58));
+}
+
+.area-hero-photo4-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.area-hero-photo4-overlay h1 {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: clamp(1.7rem, 4.2vw, 3rem);
+  max-width: 900px;
+  padding: 0 24px;
+}
+
 /* =========================================================
    Página de área — intro centrada
    ========================================================= */
 .area-intro {
-  padding: 70px 0 60px;
+  padding: 50px 0 60px;
   text-align: center;
   background-color: #35284f;
 }
@@ -2235,19 +2363,23 @@ img.ph {
   color: white;
 }
 
+
+
+
+
 /* =========================================================
    Página de área — cuadrícula de servicios sobre índigo
    ========================================================= */
 .area-services {
   background: #4a3b68;
-  padding: 70px 0 90px;
+  padding: 30px 0 30px;
   color: var(--white);
 }
 
 .area-services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.8em 3em;
+  gap: 1.8em 5em;
 }
 
 .area-service-figure {
@@ -2596,7 +2728,7 @@ img.ph {
 .contact-info-band {
   background: #35284f;
   color: var(--white);
-  padding: 4.4em 0;
+  padding: 2.4em 0;
 }
 
 .contact-info-band .container {
@@ -2647,7 +2779,7 @@ img.ph {
    ========================================================= */
 .contact-form-section {
   background: #4a3b68;
-  padding: 4.4em 0 5em;
+  padding: 1.4em 0 1.4em;
 }
 
 .contact-form-section h2 {
@@ -2661,7 +2793,7 @@ img.ph {
 .form-grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.6em 2em;
+  gap: 0.6em 2em;
 }
 
 .form-grid-2 .field-full {
@@ -2701,7 +2833,7 @@ img.ph {
    Mapa a pantalla completa
    ========================================================= */
 .map-full {
-  height: 440px;
+  height: 300px;
 }
 
 .map-full iframe {
