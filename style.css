@@ -129,6 +129,12 @@ button {
   padding: 0 24px;
 }
 
+.container4 {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 24px 24px 24px 24px;
+}
+
 .contenedor {
   width: 100%;
   padding: 0 24px;
